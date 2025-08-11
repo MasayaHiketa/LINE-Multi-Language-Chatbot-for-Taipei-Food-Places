@@ -4,48 +4,48 @@ This project is a LINE Messaging API bot that recommends ramen restaurants based
 It uses natural language processing, location extraction, and FAISS vector search to provide relevant results with ratings, photos, and Google Maps links.
 
 Features
-Location-aware search: Extracts location names from user queries and prioritizes nearby stores
+  Location-aware search: Extracts location names from user queries and prioritizes nearby stores
 
-Ramen store recommendations: Uses FAISS similarity search to find matching restaurants from a dataset
+  Ramen store recommendations: Uses FAISS similarity search to find matching restaurants from a dataset
 
-Google Places API integration: Fetches photos, ratings, and reviews count
+  Google Places API integration: Fetches photos, ratings, and reviews count
 
-LINE Flex Messages: Displays rich cards with store name, rating (stars), photo, address, features, and map button
+  LINE Flex Messages: Displays rich cards with store name, rating (stars), photo, address, features, and map button
 
-Multi-language support: Translates results based on user language
+  Multi-language support: Translates results based on user language
 
-FastAPI backend: Handles LINE webhook requests
+  FastAPI backend: Handles LINE webhook requests
 
 Tech Stack
-Python
+  Python
 
-FastAPI – Web API framework for LINE webhook
+  FastAPI – Web API framework for LINE webhook
 
-LangChain – NLP and document retrieval
+  LangChain – NLP and document retrieval
 
-FAISS – Vector similarity search
+  FAISS – Vector similarity search
 
-Google Places API – Location, photos, ratings
+  Google Places API – Location, photos, ratings
 
-Geopy – Geocoding & distance calculation
+  Geopy – Geocoding & distance calculation
 
-LINE Messaging API – Sending messages & Flex templates
+  LINE Messaging API – Sending messages & Flex templates
 
-Docker – Containerized deployment
+  Docker – Containerized deployment
 
-PostgreSQL (optional) – Data storage
+  PostgreSQL – Data storage
 
-Pydantic – Data validation
+  Pydantic – Data validation
 
 How It Works
-User sends a ramen-related message to the LINE bot
+  User sends a ramen-related message to the LINE bot
 
-Bot extracts location keywords (if any)
+  Bot extracts location keywords (if any)
 
-Searches FAISS vector store for similar restaurants
+  Searches FAISS vector store for similar restaurants
 
-Ranks by distance if location is available
+  Ranks by distance if location is available
 
-Fetches additional info from Google Places API
+  Fetches additional info from Google Places API
 
-Returns top 3 results as Flex Messages
+  Returns top 3 results as Flex Messages
