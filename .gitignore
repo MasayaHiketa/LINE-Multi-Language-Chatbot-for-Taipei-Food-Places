@@ -1,0 +1,16 @@
+cat <<EOF > .gitignore
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+
+# Environment files
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+EOF

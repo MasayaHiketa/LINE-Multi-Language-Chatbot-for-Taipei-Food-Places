@@ -1,0 +1,7 @@
+unstructured  # より高度なドキュメント分解に
+langchain>=0.1.14
+openai>=1.25.0
+faiss-cpu>=1.7.4
+tqdm
+langchain-community
+sentence-transformers
