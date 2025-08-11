@@ -1,4 +1,5 @@
 Ramen Recommendation LINE Bot
+
 This project is a LINE Messaging API bot that recommends ramen restaurants based on user queries.
 It uses natural language processing, location extraction, and FAISS vector search to provide relevant results with ratings, photos, and Google Maps links.
 
