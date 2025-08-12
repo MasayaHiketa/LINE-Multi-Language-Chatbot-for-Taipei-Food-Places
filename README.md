@@ -4,22 +4,6 @@
 A LINE Messaging API bot that recommends restaurants based on user queries.
 It uses natural language processing, location extraction, and FAISS vector search to provide results with ratings, photos, and Google Maps links.
 
-
-★ Features★ 
-==================================================================================================================================================
-
-・ Location-aware search – Extracts location names from user queries and prioritizes nearby stores
-
-・ Ramen store recommendations – FAISS similarity search from a ramen dataset
-
-・ Google Places API integration – Fetches photos, ratings, and reviews count
-
-・ LINE Flex Messages – Rich cards with store name, rating (stars), photo, address, features, and map button
-
-・ Multi-language support – Automatically translates results to the user’s language
-
-・ FastAPI backend – Handles LINE webhook requests efficiently
-
 ★ Tech Stack★ 
 ==================================================================================================================================================
 
@@ -40,6 +24,22 @@ It uses natural language processing, location extraction, and FAISS vector searc
 ・ Docker – Containerized deployment
 
 ・ Pydantic – Data validation
+
+★ Features★ 
+==================================================================================================================================================
+
+・ Location-aware search – Extracts location names from user queries and prioritizes nearby stores
+
+・ Ramen store recommendations – FAISS similarity search from a ramen dataset
+
+・ Google Places API integration – Fetches photos, ratings, and reviews count
+
+・ LINE Flex Messages – Rich cards with store name, rating (stars), photo, address, features, and map button
+
+・ Multi-language support – Automatically translates results to the user’s language
+
+・ FastAPI backend – Handles LINE webhook requests efficiently
+
 
 ★ How It Works★ 
 ==================================================================================================================================================
