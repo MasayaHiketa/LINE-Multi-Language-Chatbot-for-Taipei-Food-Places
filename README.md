@@ -1,8 +1,10 @@
 Ramen Recommendation LINE Bot
+
 A LINE Messaging API bot that recommends ramen restaurants based on user queries.
 It uses natural language processing, location extraction, and FAISS vector search to provide results with ratings, photos, and Google Maps links.
 
 ★ Features
+
 ・ Location-aware search – Extracts location names from user queries and prioritizes nearby stores
 
 ・ Ramen store recommendations – FAISS similarity search from a ramen dataset
@@ -16,6 +18,7 @@ It uses natural language processing, location extraction, and FAISS vector searc
 ・ FastAPI backend – Handles LINE webhook requests efficiently
 
 ★ Tech Stack
+
 ・ Python
 
 ・ FastAPI – Web API framework for LINE webhook
@@ -35,6 +38,7 @@ It uses natural language processing, location extraction, and FAISS vector searc
 ・ Pydantic – Data validation
 
 ★ How It Works
+
 User sends a ramen-related message to the LINE bot
 
 Bot extracts location keywords (if any)
