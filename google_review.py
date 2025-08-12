@@ -1,4 +1,4 @@
-# google_review_2.py
+# google_review.py
 
 import os
 import json

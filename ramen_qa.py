@@ -1,3 +1,5 @@
+#ramen_qa.py
+
 import os
 import re
 from typing import Optional, Dict, Any, List
@@ -34,8 +36,9 @@ _qa_chain: Optional[RetrievalQA] = None
 # ───────────────────────────────────────
 QA_PROMPT = PromptTemplate(
     template="""\
-您是台北的拉麵導覽 AI，請根據以下參考資料，對提問做出簡潔且具體的回答。
-**請優先考慮「問題中提及的地點」與「捷運站」欄位最接近的店家，最多給出3家。**
+您是台北的餐廳導覽 AI，請根據以下參考資料，對提問做出簡潔且具體的回答。
+**請優先考慮「問題中提及的地點」與「捷運站」欄位最接近的餐廳，最多給出3家。**
+可以包含任何類型的餐飲（中式、西式、日本料理、甜點、咖啡廳等）。
 
 請僅以以下格式，每家店之間以 `---` 分隔，並不要加入其他說明文字或語句。
 
@@ -56,6 +59,31 @@ QA_PROMPT = PromptTemplate(
 """,
     input_variables=["context", "question"]
 )
+
+# QA_PROMPT = PromptTemplate(
+#     template="""\
+# 您是台北的拉麵導覽 AI，請根據以下參考資料，對提問做出簡潔且具體的回答。
+# **請優先考慮「問題中提及的地點」與「捷運站」欄位最接近的店家，最多給出3家。**
+
+# 請僅以以下格式，每家店之間以 `---` 分隔，並不要加入其他說明文字或語句。
+
+# 問題：
+# {question}
+
+# 參考資料：
+# {context}
+
+# 輸出格式（最多三家）：
+
+# 店名：  
+# 地址：   
+# 評價：  
+# 推薦：  
+# 特色：
+# 營業時間:
+# """,
+#     input_variables=["context", "question"]
+# )
 
 # ───────────────────────────────────────
 # ヘルパー：地名→座標
@@ -183,6 +211,34 @@ def answer_ramen(query: str, metadata_filters: Optional[Dict[str, Any]] = None) 
         lines.append(f"Link：{matched_url}")
 
         final_text = "\n".join(lines)
+
+    # # final_text = ... を作った後の部分を差し替え
+    # if not src_lang.startswith("zh"):
+    #     translated_lines = []
+    #     for ln in lines:
+    #         # 全角/半角コロン対応で key / val に分割
+    #         if "：" in ln:
+    #             key, val = ln.split("：", 1)
+    #             colon = "："
+    #         elif ":" in ln:
+    #             key, val = ln.split(":", 1)
+    #             colon = ":"
+    #         else:
+    #             translated_lines.append(ln)
+    #             continue
+
+    #         key = key.strip()
+    #         val = val.strip()
+
+    #         # 店名とLinkの値は翻訳しない（店名は固有名詞、LinkはURL）
+    #         if key in ("店名", "Link"):
+    #             translated_val = val
+    #         else:
+    #             translated_val = _translate(val, src_lang)
+
+    #         translated_lines.append(f"{key}{colon}{translated_val}")
+
+    #     final_text = "\n".join(translated_lines)
 
 
         # 多言語対応（店名は翻訳しない）
