@@ -1,7 +1,8 @@
-★ ★ ★ Restaurants Recommendation LINE Bot★ ★ ★ 
+====Restaurants Recommendation LINE Bot====
 
 A LINE Messaging API bot that recommends restaurants based on user queries.
 It uses natural language processing, location extraction, and FAISS vector search to provide results with ratings, photos, and Google Maps links.
+==================================================================================================================================================
 
 ★ Features★ 
 
