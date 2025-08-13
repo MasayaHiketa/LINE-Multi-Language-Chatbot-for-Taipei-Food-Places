@@ -4,6 +4,10 @@
 A LINE Messaging API bot that recommends restaurants based on user queries.
 It uses natural language processing, location extraction, and FAISS vector search to provide results with ratings, photos, and Google Maps links.
 
+| 中文 | 日本語 | English |
+|--------|------|---------|
+| ![](images/zh.png) | ![](images/jp.png) | ![](images/en.png) |
+
 ★ Tech Stack★ 
 ==================================================================================================================================================
 
