@@ -6,7 +6,7 @@ It uses natural language processing, location extraction, and FAISS vector searc
 
 | 中文 | 日本語 | English |
 |--------|------|---------|
-| ![](images/zh.png) | ![](images/jp.png) | ![](images/en.png) |
+| ![](images/zh.png) | ![](images/jp.png) | ![](images/14483_0.jpg) |
 
 ★ Tech Stack★ 
 ==================================================================================================================================================
