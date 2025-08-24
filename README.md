@@ -1,4 +1,4 @@
-====Restaurants Recommendation LINE Bot====
+====Restaurants Recommendation LINE Bot (RAG-based)====
 ==================================================================================================================================================
 
 A LINE Messaging API bot that recommends restaurants based on user queries.
